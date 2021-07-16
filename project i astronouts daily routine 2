@@ -1,0 +1,42 @@
+
+var astronoutmove,astronoutmoveImg
+var iss , issImg
+var astronoutbath,astronoutbath2,astronoutbrush,astronoutdrink1
+var astronouteat1,astronouteat2,astronoutgym1,astronoutgym2,astronoutdrink2
+var astronoutSleep
+
+function preload(){
+ astronoutmoveImg=loadImage("move1.png")
+ issImg=loadImage("iss.png")
+ astronoutbath=loadImage("bath1.png")
+astronoutbath2=loadImage("bath2.png")
+astronoutdrink1=loadImage("drink1.png")
+astronoutdrink2=loadImage("drink2.png")
+astronouteat1=loadImage("eat1.png")
+astronouteat2=loadImage("eat2.png")
+}
+
+function setup(){
+    createCanvase(400,400)
+
+    astronoutmove=creatSprite(200,360,50,40);
+    astronoutmove.addImage("asstro",astronoutmoveImg)
+    astronoutmove.scale=1.5
+    astronoutmove.velocityY=0.2
+    astronoutmove.velocityX=0.4
+
+    iss=creatSprite(400,400);
+    iss.addImage("international space station",issImg)
+    iss.scale=5.5
+
+
+
+
+}
+
+function draw(){
+    background(0)
+    
+    astronoutmove.bounceoff("edges")
+    createEdgeSprites
+}
